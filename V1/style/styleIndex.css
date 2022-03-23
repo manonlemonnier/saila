@@ -1,0 +1,105 @@
+html{
+    height:100%;
+}
+
+@font-face {
+    font-family: "Hearth Stone";
+    src: url("../police/Hearth Stone.otf");
+}
+
+body{
+    height:100%;
+    overflow:hidden;
+    margin:0px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "leftBox rightBox";
+    text-align: center;
+}
+
+#titreIndex{
+    display: flex;
+    z-index: 3;
+	position : absolute;
+    top:20%;
+	margin-left : 43%;
+	margin-right : auto;
+}
+
+.boxes{
+    filter:brightness(70%);
+    transition: 1s;
+    display: flex;
+}
+
+.txtSaila{
+	font-family : "Hearth Stone";
+}
+
+.boxes:hover{
+    filter:brightness(100%);
+    transform: scale(1.1);
+    z-index:2;
+}
+
+#leftBox {
+    background-color:aquamarine;
+    grid-area:leftBox;
+    background-image: url("../img/landscape.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#rightBox {
+    background-color:pink;
+    grid-area:rightBox;
+    background-image: url("../img/animo.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+h2 {
+    vertical-align: middle;
+    margin:auto;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+h2 a{
+    text-decoration: none;
+    color:black;
+}
+
+/* Discover Saila */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+@media only screen and (max-width:750px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "leftBox"
+        "rightBox";
+    }
+	#titreIndex{
+    display: flex;
+    z-index: 2;
+	position : absolute;
+	top : 43%;
+	margin-left : 30%;
+	margin-right : auto;
+}
+}
